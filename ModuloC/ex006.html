@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10 - DOM</title>
+    <style>
+        body{
+            background-color: rgb(93, 118, 118);
+            color: black;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Calculadora Somar</h1>
+    <input type="number" name="num1" id="num1"> + 
+    <input type="number" name="num2" id="num2">
+    <button onclick="somar()" >Somar </button>
+    <div id="resultados">
+        Resultado
+    </div>
+
+
+    
+
+    <script>
+        function somar(){
+            var p1 = window.document.getElementById('num1')
+            p1.style.color = 'blue'
+
+            var p2 = window.document.getElementById('num2')
+            p2.style.color = 'green'
+
+            var soma = Number(p1.value) + Number(p2.value)
+
+            var resultado = window.document.getElementById('resultados')
+            resultado.style.color = 'blue'
+
+            resultado.innerHTML = `A soma entre ${p1.value} e ${p2.value} é = <span style="color: black">${soma}</span>`
+            
+        }
+        
+
+        
+    </script>
+</body>
+</html>
