@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11 - DETRAN</title>
+    <style>
+        body {
+            background-color: rgb(93, 118, 118);
+            color: black;
+            font: normal 18pt Arial;
+            text-align: center;
+            margin: auto;
+        }
+
+        input#caixa{
+            padding: 10px;
+            background-color: rgb(88, 91, 37);
+            color: white;
+            font-family: monospace;
+            font-size: 20px;
+            
+        }
+
+        button {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Testando sua nascionalidade</h1>
+    <input type="text" name="caixa" id="caixa">
+    <button id="butt" onclick="clicar()">Testar</button>
+
+    <div id="Res">
+        Sua Nacionalidade é:
+    </div>
+
+    <script>
+        function clicar() {
+            var info = window.document.getElementById('caixa').value.toLowerCase()
+            var resul = window.document.getElementById('Res')
+            
+            if (info == 'br') {
+                resul.innerHTML = "Sua Nacionalidade é: <strong>Brasileira</strong>"
+            }
+            else {
+                resul.innerHTML = "Sua Nacionalidade é: <strong>Estrangeira</strong>"
+            }
+        }
+
+    </script>
+</body>
+
+</html>
