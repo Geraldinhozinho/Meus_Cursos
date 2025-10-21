@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11 - DETRAN</title>
+    <style>
+        body {
+            background-color: rgb(93, 118, 118);
+            color: black;
+            font: normal 18pt Arial;
+            text-align: center;
+            margin: auto;
+
+
+        }
+
+        input#vel{
+            padding: 10px;
+            background-color: rgb(88, 91, 37);
+            color: white;
+            font-family: monospace;
+            font-size: 20px;
+            
+        }
+
+        button {
+            padding: 10px;
+        }
+
+        div#resposta {
+            max-width: 400px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 30px;
+            margin: auto;
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Informe a velocidade do Veículo:</h1>
+    <input type="number" name="vel" id="vel">Km/h
+    <button id="but" onclick="Calcu()" >Calcular</button>
+
+    <div id="resposta" onclick="mouse()" onmouseout="mouse2()">
+        
+    </div>
+
+
+
+
+
+    <script>
+        function Calcu() {
+            var p1 = Number(window.document.getElementById('vel').value)
+            
+            var res = window.document.getElementById('resposta')
+
+            res.style.display = "block"
+            
+            if (p1 > 60){
+                res.innerText = "Você foi MULTADO"
+                res.style.background = "#a52a2a"
+            }
+            else{
+                res.innerHTML = `<p style="color: black"> Você esta dirigindo certo! PARABÉNS!</p>`
+                res.style.background = "#346820"
+            }
+
+            
+        }
+
+        function mouse(){
+            var but = window.document.getElementById('resposta')
+            but.style.background = 'yellow'
+        }
+        function mouse2(){
+            var but = window.document.getElementById('resposta')
+            but.style.background = '#346820'
+        }
+
+
+
+    </script>
+</body>
+
+</html>
