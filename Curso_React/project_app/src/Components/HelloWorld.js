@@ -1,5 +1,5 @@
 
-import {Frase} from "./components/Frase";
+import {Frase} from "./Frase";
 
 export function HelloWorld(){
     return(
